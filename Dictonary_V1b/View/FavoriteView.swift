@@ -14,7 +14,7 @@ struct FavoriteView: View {
     @EnvironmentObject var model: ContentModel
     @State var audioPlayer: AVAudioPlayer!
     var body: some View {
-        let url = model.books[0].audioEng
+       
         ScrollView{
             LazyVStack {Text("Favorites")
                     .font(.title).bold()
