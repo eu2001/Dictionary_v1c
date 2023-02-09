@@ -7,7 +7,7 @@
 
 import SwiftUI
 import AVKit
-import AVFoundation
+
 
 
 struct FavoriteView: View {
