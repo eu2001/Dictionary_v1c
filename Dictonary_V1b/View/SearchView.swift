@@ -10,8 +10,8 @@ import SwiftUI
 struct SearchView: View {
     
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Search").font(.title).bold().padding([.leading, .bottom, .trailing], 20.0)
+      //  VStack(alignment: .leading){
+          //  Text("Search").font(.title).bold().padding([.leading, .bottom, .trailing], 20.0)
             NavigationView {
                 ScrollView{
                     VStack(alignment: .leading, spacing: 25.0){ NavigationLink( destination: SearchWord(), label: { Text("Search by Word").foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
@@ -34,11 +34,15 @@ struct SearchView: View {
                                 .foregroundColor(.white)
                                 .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
                             .cornerRadius(10)})
-                    }
-                    
-                    .padding(.bottom)
-                }}}.navigationBarBackButtonHidden(true).padding(.horizontal)
-    }}
+                    }.navigationBarHidden(false).padding(.bottom)
+                }.padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            }
+        
+    //}.padding(.horizontal)
+        
+    }
+
+}
 
 
 struct SearchView_Previews: PreviewProvider {

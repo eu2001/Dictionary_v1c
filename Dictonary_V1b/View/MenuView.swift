@@ -25,9 +25,8 @@ struct MenuView: View {
                         Text("Practice")}}.tag(3)
                     HelpView().tabItem{VStack{Image(systemName: "info.circle")
                         Text("Help")}}.tag(4)
-                    
-                    
-                }
+                   
+                }.navigationBarHidden(true)
             }
         }
 

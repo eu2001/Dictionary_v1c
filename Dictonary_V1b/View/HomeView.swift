@@ -18,7 +18,7 @@ struct HomeView: View {
                                Text("Flight Attendant").font(.largeTitle)
                                    .fontWeight(.bold)
                                    .multilineTextAlignment(.center)
-                                   .padding(/*@START_MENU_TOKEN@*/.top, 25.0/*@END_MENU_TOKEN@*/)
+                                   .padding(/*@START_MENU_TOKEN@*/.top, 85.0/*@END_MENU_TOKEN@*/)
                                 Text("Dictionary")
                                    .font(.largeTitle)
                                    .fontWeight(.bold)
