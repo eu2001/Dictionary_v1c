@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct SearchWord: View {
+   var listofWords = ["Airplane", "Airport", "Good Morning","Overhead Bin","Boarding"]
+    @State var searchText = ""
     var body: some View {
-        Text("Serch Word")
+        NavigationView{
+            List{
+                ForEach(words, id: \.self){ word in
+                    HStack {Text(word.capitalized)}
+                }
+            }.searchable(text: $searchText)
+        }
+        
+    }
+    var words: [String] {
+        let lcWords = listofWords.map { $0.lowercased() }
+        return searchText == "" ? lcWords : lcWords.filter{ $0.contains(searchText.lowercased())}
     }
 }
 
