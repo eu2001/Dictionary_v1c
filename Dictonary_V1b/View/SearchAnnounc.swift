@@ -40,7 +40,8 @@ struct SearchAnnounc: View {
                 {
                     Spacer()
                     HStack{
-                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
+                        Button { SoundManager.instance.playSound(sound: .BoardingAnnounc) } label: {
+                            Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
                         Text(model.books[3].nameEng)
                         .font(.title3)
                         
@@ -50,8 +51,8 @@ struct SearchAnnounc: View {
                    
                    Divider()
                     Spacer()
-                    HStack{
-                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
+                    HStack{  Button { SoundManager.instance.playSound(sound: .BoardingAnnouncPOR) } label: {
+                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
                         Text(model.books[3].namePort)
                         .font(.title3)
                         

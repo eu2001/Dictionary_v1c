@@ -14,6 +14,15 @@
 		AF28BC56299302A800B08551 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC55299302A800B08551 /* FavoriteView.swift */; };
 		AF28BC58299302D300B08551 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC57299302D300B08551 /* LanguageView.swift */; };
 		AF28BC5A299305CB00B08551 /* FlashCardsGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC59299305CB00B08551 /* FlashCardsGameView.swift */; };
+		AF5B408E2998283100848368 /* Goodmorning.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B408D2998283100848368 /* Goodmorning.m4a */; };
+		AF5B40E129982E9400848368 /* GoodmorningHEB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40D929982E9200848368 /* GoodmorningHEB.m4a */; };
+		AF5B40E229982E9400848368 /* BoardingAnnouncPOR.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40DA29982E9200848368 /* BoardingAnnouncPOR.m4a */; };
+		AF5B40E329982E9400848368 /* GoodmorningITA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40DB29982E9200848368 /* GoodmorningITA.m4a */; };
+		AF5B40E429982E9400848368 /* GoodmorningPOR.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40DC29982E9200848368 /* GoodmorningPOR.m4a */; };
+		AF5B40E629982E9400848368 /* GoodmorningSPA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40DE29982E9300848368 /* GoodmorningSPA.m4a */; };
+		AF5B40E729982E9400848368 /* GoodmorningFRE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40DF29982E9300848368 /* GoodmorningFRE.m4a */; };
+		AF5B40E829982E9400848368 /* BoardingAnnounc.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40E029982E9400848368 /* BoardingAnnounc.m4a */; };
+		AF5B40EA2998303C00848368 /* GoodmorningGER.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40E92998303C00848368 /* GoodmorningGER.m4a */; };
 		AF78015B29941D250014154C /* SearchAnnounc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78015A29941D250014154C /* SearchAnnounc2.swift */; };
 		AFB6E0B82993537B000509CA /* SearchWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6E0B72993537B000509CA /* SearchWord.swift */; };
 		AFB6E0BA2993538E000509CA /* SearchCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6E0B92993538E000509CA /* SearchCategory.swift */; };
@@ -39,7 +48,15 @@
 		AF28BC55299302A800B08551 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		AF28BC57299302D300B08551 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		AF28BC59299305CB00B08551 /* FlashCardsGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsGameView.swift; sourceTree = "<group>"; };
-		AF5B408A29973C2400848368 /* good.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = good.mp3; sourceTree = "<group>"; };
+		AF5B408D2998283100848368 /* Goodmorning.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Goodmorning.m4a; sourceTree = "<group>"; };
+		AF5B40D929982E9200848368 /* GoodmorningHEB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = GoodmorningHEB.m4a; path = ../../../../../Desktop/sounds/GoodmorningHEB.m4a; sourceTree = "<group>"; };
+		AF5B40DA29982E9200848368 /* BoardingAnnouncPOR.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = BoardingAnnouncPOR.m4a; path = ../../../../../Desktop/sounds/BoardingAnnouncPOR.m4a; sourceTree = "<group>"; };
+		AF5B40DB29982E9200848368 /* GoodmorningITA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = GoodmorningITA.m4a; path = ../../../../../Desktop/sounds/GoodmorningITA.m4a; sourceTree = "<group>"; };
+		AF5B40DC29982E9200848368 /* GoodmorningPOR.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = GoodmorningPOR.m4a; path = ../../../../../Desktop/sounds/GoodmorningPOR.m4a; sourceTree = "<group>"; };
+		AF5B40DE29982E9300848368 /* GoodmorningSPA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = GoodmorningSPA.m4a; path = ../../../../../Desktop/sounds/GoodmorningSPA.m4a; sourceTree = "<group>"; };
+		AF5B40DF29982E9300848368 /* GoodmorningFRE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = GoodmorningFRE.m4a; path = ../../../../../Desktop/sounds/GoodmorningFRE.m4a; sourceTree = "<group>"; };
+		AF5B40E029982E9400848368 /* BoardingAnnounc.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = BoardingAnnounc.m4a; path = ../../../../../Desktop/sounds/BoardingAnnounc.m4a; sourceTree = "<group>"; };
+		AF5B40E92998303C00848368 /* GoodmorningGER.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = GoodmorningGER.m4a; path = ../../../../GoodmorningGER.m4a; sourceTree = "<group>"; };
 		AF78015A29941D250014154C /* SearchAnnounc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnnounc2.swift; sourceTree = "<group>"; };
 		AFB6E0B72993537B000509CA /* SearchWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWord.swift; sourceTree = "<group>"; };
 		AFB6E0B92993538E000509CA /* SearchCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategory.swift; sourceTree = "<group>"; };
@@ -91,7 +108,6 @@
 		AF28BC4C2992FA9900B08551 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AF5B408A29973C2400848368 /* good.mp3 */,
 				AFCFDED52992A7F000BF1DB4 /* HomeView.swift */,
 				AF28BC4F2993027600B08551 /* HelpView.swift */,
 				AF28BC4D2993019D00B08551 /* MenuView.swift */,
@@ -107,6 +123,22 @@
 				AF78015A29941D250014154C /* SearchAnnounc2.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AF5B408F2998287F00848368 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				AF5B408D2998283100848368 /* Goodmorning.m4a */,
+				AF5B40E029982E9400848368 /* BoardingAnnounc.m4a */,
+				AF5B40DA29982E9200848368 /* BoardingAnnouncPOR.m4a */,
+				AF5B40E92998303C00848368 /* GoodmorningGER.m4a */,
+				AF5B40DF29982E9300848368 /* GoodmorningFRE.m4a */,
+				AF5B40D929982E9200848368 /* GoodmorningHEB.m4a */,
+				AF5B40DB29982E9200848368 /* GoodmorningITA.m4a */,
+				AF5B40DC29982E9200848368 /* GoodmorningPOR.m4a */,
+				AF5B40DE29982E9300848368 /* GoodmorningSPA.m4a */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		AFBA8C5F299564E90062D7B0 /* Frameworks */ = {
@@ -162,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				AFCFDEE52992A88D00BF1DB4 /* data.json */,
+				AF5B408F2998287F00848368 /* Sounds */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -224,8 +257,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5B40E729982E9400848368 /* GoodmorningFRE.m4a in Resources */,
 				AFCFDEDB2992A7F300BF1DB4 /* Preview Assets.xcassets in Resources */,
+				AF5B40E629982E9400848368 /* GoodmorningSPA.m4a in Resources */,
+				AF5B40EA2998303C00848368 /* GoodmorningGER.m4a in Resources */,
+				AF5B40E829982E9400848368 /* BoardingAnnounc.m4a in Resources */,
+				AF5B408E2998283100848368 /* Goodmorning.m4a in Resources */,
+				AF5B40E329982E9400848368 /* GoodmorningITA.m4a in Resources */,
+				AF5B40E129982E9400848368 /* GoodmorningHEB.m4a in Resources */,
+				AF5B40E229982E9400848368 /* BoardingAnnouncPOR.m4a in Resources */,
 				AFCFDEE62992A88D00BF1DB4 /* data.json in Resources */,
+				AF5B40E429982E9400848368 /* GoodmorningPOR.m4a in Resources */,
 				AFCFDED82992A7F300BF1DB4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

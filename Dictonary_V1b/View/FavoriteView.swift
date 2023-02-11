@@ -8,20 +8,39 @@
 import SwiftUI
 import AVKit
 
-/*class SoundManager {
+class SoundManager {
     static let instance = SoundManager ()
     var player: AVAudioPlayer?
-    func playSound() {
-        guard let url = Bundle.main.url(forResource: "good", withExtension: "mp3") else { return }
+    enum SoundOption: String {
+        case Airplane
+        case AirplaneESP
+        case AirplaneGER
+        case AirplaneHEB
+        case AiplanePOR
+        case AirplaneITA
+        case AirplaneFRE
+        case Goodmorning
+        case GoodmorningPOR
+        case GoodmorningSPA
+        case GoodmorningITA
+        case GoodmorningFRE
+        case GoodmorningGER
+        case GoodmorningHEB
+        case BoardingAnnounc
+        case BoardingAnnouncPOR
+    }
+    func playSound(sound: SoundOption) {
+        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: "m4a") else { return }
         do{ player = try AVAudioPlayer(contentsOf: url)
             player?.play()
-        } catch let error { print ("Error playing")}
+        } catch { print ("Error playing")}
     }
-} */
+}
 
 struct FavoriteView: View {
     @EnvironmentObject var model: ContentModel
     @State var audioPlayer: AVAudioPlayer?
+    
     var body: some View {
        
         ScrollView{
@@ -33,40 +52,52 @@ struct FavoriteView: View {
                        
                         Rectangle().background(.white).foregroundColor(.white).cornerRadius(15).shadow(color: .gray, radius: 5, x: 5, y: 5).aspectRatio(CGSize(width:335, height: 230),contentMode: .fit)
                         VStack(alignment: .leading){ HStack {
-                            Button(action: {}) {
+                            Button(action: {SoundManager.instance.playSound(sound: .Goodmorning) }) {
                                 Image(systemName: "star.fill").resizable().frame(width: 15, height: 15).foregroundColor(.yellow)
                                
                                 Text(r.nameEng).fontWeight(.bold).foregroundColor(Color.blue)}}
                             HStack{Text("SPA:")
                                                            Text(r.nameEsp)
-                                Button { /* SoundManager.instance.playSound() */ } label: {
+                                Button { SoundManager.instance.playSound(sound: .GoodmorningSPA) } label: {
                                     Image(systemName: "speaker.fill")
                                 }
    
                             }
                             HStack{Text("FRE:")
                                 Text(r.nameFre)
-                                Image(systemName: "speaker.fill")
+                                Button { SoundManager.instance.playSound(sound: .GoodmorningFRE) } label: {
+                                    Image(systemName: "speaker.fill")
+                                }
                             }
                             HStack{Text("GER:")
                                 Text(r.nameGer)
-                                Image(systemName: "speaker.fill")
+                                Button { SoundManager.instance.playSound(sound: .GoodmorningGER) } label: {
+                                    Image(systemName: "speaker.fill")
+                                }
                             }
                             HStack{Text("POR:")
                                 Text(r.namePort)
-                                Image(systemName: "speaker.fill")
+                                Button { SoundManager.instance.playSound(sound: .GoodmorningPOR) } label: {
+                                    Image(systemName: "speaker.fill")
+                                }
                             }
                             HStack{Text("ITA:")
                                 Text(r.nameIta)
-                                Image(systemName: "speaker.fill")
+                                Button { SoundManager.instance.playSound(sound: .GoodmorningITA) } label: {
+                                    Image(systemName: "speaker.fill")
+                                }
                             }
                             HStack{Text("HEB:")
                                 Text(r.nameheb)
-                                Image(systemName: "speaker.fill")
+                                Button { SoundManager.instance.playSound(sound: .GoodmorningHEB) } label: {
+                                    Image(systemName: "speaker.fill")
+                                }
                             }
                             HStack{Text("ASL:")
                                 Text(r.nameEng)
-                                Image(systemName: "playpause.fill")
+                                Button { SoundManager.instance.playSound(sound: .Goodmorning) } label: {
+                                    Image(systemName: "play.fill")
+                                }
                             }
                             
                         }
