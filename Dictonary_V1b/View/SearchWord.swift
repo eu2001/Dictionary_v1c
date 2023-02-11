@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchWord: View {
    var listofWords = ["Airplane", "Airport", "Good Morning","Overhead Bin","Boarding"]
     @State var searchText = ""
+    @EnvironmentObject var model: ContentModel
     var body: some View {
         NavigationView{
             List{
@@ -28,6 +29,6 @@ struct SearchWord: View {
 
 struct SearchWord_Previews: PreviewProvider {
     static var previews: some View {
-        SearchWord()
+        SearchWord().environmentObject(ContentModel())
     }
 }

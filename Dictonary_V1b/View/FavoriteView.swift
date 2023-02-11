@@ -8,11 +8,20 @@
 import SwiftUI
 import AVKit
 
-
+/*class SoundManager {
+    static let instance = SoundManager ()
+    var player: AVAudioPlayer?
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "good", withExtension: "mp3") else { return }
+        do{ player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch let error { print ("Error playing")}
+    }
+} */
 
 struct FavoriteView: View {
     @EnvironmentObject var model: ContentModel
-    @State var audioPlayer: AVAudioPlayer!
+    @State var audioPlayer: AVAudioPlayer?
     var body: some View {
        
         ScrollView{
@@ -30,7 +39,7 @@ struct FavoriteView: View {
                                 Text(r.nameEng).fontWeight(.bold).foregroundColor(Color.blue)}}
                             HStack{Text("SPA:")
                                                            Text(r.nameEsp)
-                                Button {} label: {
+                                Button { /* SoundManager.instance.playSound() */ } label: {
                                     Image(systemName: "speaker.fill")
                                 }
    
@@ -71,7 +80,19 @@ struct FavoriteView: View {
             }
         } 
     }
+   
+   /* func playSound() {
+        let pathToSound = Bundle.main.path(forResource:"good", ofType: "m4a")!
+        let url = URL(fileURLWithPath: pathToSound)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        }
+        catch { print (error)}
+    }*/
+
 }
+
 
 struct FavoriteView_Previews: PreviewProvider {
     static var previews: some View {

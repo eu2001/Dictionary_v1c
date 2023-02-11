@@ -53,15 +53,16 @@ struct FlashCardsGameView: View {
                         .fontWeight(.medium)
                         .foregroundColor(Color.black).tag("FAV")
                     
-                }.padding(.bottom, 5.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+                }.padding(.all, 5.0).accentColor(.white).font(.title3).background(.blue).cornerRadius(20)
                 
                 Spacer()
+                
                 HStack(alignment: .center, spacing:20){
                     VStack{Image("english").resizable().scaledToFill().frame(minWidth: 30, idealWidth: 70, maxWidth: 70, minHeight: 30, idealHeight: 70, maxHeight: 70, alignment: .center).cornerRadius(45)
                         Text("English")
                     }.frame(width: 70.0, height: 90.0)
                     Image(systemName: "arrow.right.circle").resizable().frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center)
-                    VStack(spacing:0){ Image("german").resizable().scaledToFill().frame(minWidth: 30, idealWidth: 70, maxWidth: 70, minHeight: 30, idealHeight: 70, maxHeight: 70, alignment: .center).cornerRadius(45)
+                    VStack(spacing:0){ Image(bandeira()).resizable().scaledToFill().frame(minWidth: 30, idealWidth: 70, maxWidth: 70, minHeight: 30, idealHeight: 70, maxHeight: 70, alignment: .center).cornerRadius(45)
                         Picker("", selection: $pickerIndex)
                         {   Text("Spanish").tag("ESP")
                             Text("French").tag("FRE")
@@ -71,10 +72,9 @@ struct FlashCardsGameView: View {
                             Text("Hebrew").tag("HEB")
                             Text("ASL").tag("ASL")
                         }
-                        .frame(width: 200.0, height: 30)
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+                        .frame(width: 200.0, height: 30).accentColor(.black)
                     }.frame(width: 70.0, height: 90.0)
-                }
+                }.padding(.all, 20)
                 TabView {
                     
                     ForEach (model.books){
@@ -121,7 +121,23 @@ struct FlashCardsGameView: View {
             }
             
             
-        }    }
+        }
+    func bandeira( ) -> String {
+        var band = pickerIndex
+        switch band { case "ESP": band = "spanish"
+        case "FRE": band = "french"
+        case "GER": band = "german"
+        case "POR": band = "portuguese"
+        case "ITA": band = "italian"
+        case "HEB": band = "hebrew"
+        case "ASL": band = "asl"
+         default:
+        band =  "german"
+        }
+        return band
+
+    }
+}
 
 struct FlashCardsGameView_Previews: PreviewProvider {
     static var previews: some View {

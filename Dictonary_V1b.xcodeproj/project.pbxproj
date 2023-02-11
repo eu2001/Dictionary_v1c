@@ -39,6 +39,7 @@
 		AF28BC55299302A800B08551 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		AF28BC57299302D300B08551 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		AF28BC59299305CB00B08551 /* FlashCardsGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsGameView.swift; sourceTree = "<group>"; };
+		AF5B408A29973C2400848368 /* good.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = good.mp3; sourceTree = "<group>"; };
 		AF78015A29941D250014154C /* SearchAnnounc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnnounc2.swift; sourceTree = "<group>"; };
 		AFB6E0B72993537B000509CA /* SearchWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWord.swift; sourceTree = "<group>"; };
 		AFB6E0B92993538E000509CA /* SearchCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategory.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		AF28BC4C2992FA9900B08551 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF5B408A29973C2400848368 /* good.mp3 */,
 				AFCFDED52992A7F000BF1DB4 /* HomeView.swift */,
 				AF28BC4F2993027600B08551 /* HelpView.swift */,
 				AF28BC4D2993019D00B08551 /* MenuView.swift */,
