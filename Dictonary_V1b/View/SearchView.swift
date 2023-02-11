@@ -14,7 +14,9 @@ struct SearchView: View {
           //  Text("Search").font(.title).bold().padding([.leading, .bottom, .trailing], 20.0)
             NavigationView {
                 ScrollView{
-                    VStack(alignment: .leading, spacing: 25.0){ NavigationLink( destination: SearchWord(), label: { Text("Search by Word").foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
+                    VStack(alignment: .leading, spacing: 25.0){
+                        Text("Search").font(.title).bold()
+                        NavigationLink( destination: SearchWord(), label: { Text("Search by Word").foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
                             .padding(.all,20).font(.title2)
                             .foregroundColor(.white)
                             .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
@@ -35,7 +37,7 @@ struct SearchView: View {
                                 .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
                             .cornerRadius(10)})
                     }.navigationBarHidden(false).padding(.bottom)
-                }.padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                }
             }
         
     //}.padding(.horizontal)

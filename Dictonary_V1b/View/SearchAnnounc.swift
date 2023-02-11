@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct SearchAnnounc: View {
+    
     @EnvironmentObject var model: ContentModel
     var anuncios = ["Boarding","Seatbelt Sign", "Medical Emergency", "Overhead Bin Space","Turbulance","Inoperative Wifi","Deplaning"]
     @State var pickerIndex = "POR"
     @State var pickerAnou = "0"
     var body: some View {
         VStack(alignment: .leading){
+           // Button("Back to Search"){ }.padding(.bottom)
             Text("Announcements").font(.title).bold()
             HStack{
-                Text("Select the Language: ")
+                Text("Select the Language: ").font(.subheadline).bold()
                 Picker("Language", selection: $pickerIndex)
                 {Text("Spanish").tag("ESP")
                     Text("French").tag("FRE")
@@ -25,14 +27,15 @@ struct SearchAnnounc: View {
                     Text("Italian").tag("ITA")
                     Text("Hebrew").tag("HEB")
                     Text("ASL").tag("ASL")
-                }.foregroundColor(.black).padding(.bottom, 5.0).cornerRadius(15)}.accentColor(.blue).font(.title3)
+                }.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15)}.accentColor(.white)
             
             HStack{
-                Text("Select the Announcement: ")
-               
+                Text("Select the Announcement: ").font(.subheadline).bold()
+                
                 Picker("Announcement", selection: $pickerAnou){
-                ForEach(anuncios, id: \.self){ index in
-                    Text(index).tag(String(index))}.foregroundColor(.black).padding(.bottom, 5.0).cornerRadius(15)}.accentColor(.blue).font(.title3)}
+                    ForEach(anuncios, id: \.self){ index in
+                        Text(index).tag(String(index))}}.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15)}.accentColor(.white)
+           
             ScrollView { VStack(alignment: .center, spacing: 20.0)
                 {
                     Spacer()
@@ -60,7 +63,7 @@ struct SearchAnnounc: View {
                     
                     
                     
-                }.navigationBarHidden(true)
+                }//.navigationBarHidden(true)
                     .padding(/*@START_MENU_TOKEN@*/.vertical, 20.0/*@END_MENU_TOKEN@*/)
             }
             
@@ -77,7 +80,7 @@ struct SearchAnnounc: View {
             
             // }.padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).navigationBarHidden(false)
         }
-        .padding(/*@START_MENU_TOKEN@*/.all, 30.0/*@END_MENU_TOKEN@*/)}
+        .padding(.horizontal, 30.0)}
 }
 
 struct SearchAnnounc_Previews: PreviewProvider {
