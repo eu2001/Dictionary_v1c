@@ -27,44 +27,45 @@ var body: some View {
                 
             }
             HStack(spacing:10) {
-                Toggle(isOn: $spaOn){ Image("spanish").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
-                    Text("Spanish").font(.title3)}
+                Toggle(isOn: $spaOn){ HStack{ Image("spanish").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
+                    Text("Spanish").font(.title3)}}
                 
             }
             HStack(spacing:10) {
-                Toggle(isOn: $freOn){  Image("french").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
-                    Text("French").font(.title3)}
-                
-            }
-            HStack(spacing:10) {
-                Toggle(isOn: $gerOn){Image("german").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
-                    Text("German").font(.title3)}
-                
-            }
-            HStack(spacing:10) {
-                Toggle(isOn: $itaOn){  Image("italian").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
-                    Text("Italian").font(.title3)}
-                
-            }
-            HStack(spacing:10) {
-                Toggle(isOn: $porOn){  Image("portuguese").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
-                    Text("Portuguese").font(.title3)}
-                
-            }
-            HStack(spacing:10) {
-                Toggle(isOn: $hebOn){Image("hebrew").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
-                    Text("Hebrew").font(.title3)}
+                Toggle(isOn: $freOn){ HStack{ Image("french").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
+                    Text("French").font(.title3)}}
                 
             }
             
             HStack(spacing:10) {
-                Toggle(isOn: $aslOn){ Image("asl").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
-                    Text("American Sign Language").font(.title3)}
+                Toggle(isOn: $gerOn){ HStack{ Image("german").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
+                    Text("German").font(.title3)}}
+                
+            }
+            HStack(spacing:10) {
+                Toggle(isOn: $itaOn){ HStack{ Image("italian").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
+                    Text("Italian").font(.title3)}}
+                
+            }
+            HStack(spacing:10) {
+                Toggle(isOn: $porOn){ HStack{ Image("portuguese").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
+                    Text("Portuguese").font(.title3)}}
+                
+            }
+            HStack(spacing:10) {
+                Toggle(isOn: $hebOn){ HStack{
+                    Image("hebrew").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
+                    Text("Hebrew").font(.title3)}}
+                
+            }
+            
+            HStack(spacing:10) {
+                Toggle(isOn: $aslOn){ HStack{ Image("asl").resizable().scaledToFit().frame(width: 60, height: 40, alignment: .center).cornerRadius(5)
+                    Text("American Sign Language").font(.title3)}}
                 
             }
            
-        }
-        .padding(.horizontal)
+        }.padding(.horizontal, 55)
     }
 }}
 

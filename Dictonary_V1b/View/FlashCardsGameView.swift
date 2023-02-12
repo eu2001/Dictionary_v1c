@@ -74,7 +74,7 @@ struct FlashCardsGameView: View {
                         }
                         .frame(width: 200.0, height: 30).accentColor(.black)
                     }.frame(width: 70.0, height: 90.0)
-                }.padding(.all, 20)
+                }.padding(.horizontal, 20 )
                 TabView {
                     
                     ForEach (model.books){
@@ -92,20 +92,18 @@ struct FlashCardsGameView: View {
                                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                             }
                         }
-                    } }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic)).indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                    } }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic)).indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always)).padding(.bottom, 20)
                 Spacer()
                 HStack{
                     Spacer()
                     Button {} label: {
-                        VStack(spacing:0){ Image(systemName: "star").foregroundColor(.yellow)
-                            Text("Favorites")
-                                .font(.caption2)
-                            .foregroundColor(.black)}.frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center)
+                        VStack(spacing:0){ Image(systemName: "star.fill").foregroundColor(.white).padding(.all).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.yellow).cornerRadius(45)
+                            Text("Favorites").font(.caption2).foregroundColor(.black)}
                     }
                     
                     
                     Spacer()
-                    Button {} label: {
+                    Button {SoundManager.instance.playSound(sound: .GoodmorningGER)} label: {
                         Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 60, maxWidth: 60, minHeight: 30, idealHeight: 60, maxHeight: 60, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
                     }
                     
@@ -115,7 +113,7 @@ struct FlashCardsGameView: View {
                         Image(systemName: "tortoise.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
                     Spacer()
                     
-                }
+                }.padding(.bottom, 25)
                 Spacer()
                 
             }

@@ -23,6 +23,10 @@
 		AF5B40E729982E9400848368 /* GoodmorningFRE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40DF29982E9300848368 /* GoodmorningFRE.m4a */; };
 		AF5B40E829982E9400848368 /* BoardingAnnounc.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40E029982E9400848368 /* BoardingAnnounc.m4a */; };
 		AF5B40EA2998303C00848368 /* GoodmorningGER.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40E92998303C00848368 /* GoodmorningGER.m4a */; };
+		AF5B40F029989FA400848368 /* GifAslView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B40EF29989FA400848368 /* GifAslView.swift */; };
+		AF5B40F62998AB5500848368 /* pokeball.GIF in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40F52998AB5500848368 /* pokeball.GIF */; };
+		AF5B40F829995A8C00848368 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B40F729995A8C00848368 /* GifImage.swift */; };
+		AF5B40FA29995CD800848368 /* GoodmorningASL.gif in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40F929995CD800848368 /* GoodmorningASL.gif */; };
 		AF78015B29941D250014154C /* SearchAnnounc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78015A29941D250014154C /* SearchAnnounc2.swift */; };
 		AFB6E0B82993537B000509CA /* SearchWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6E0B72993537B000509CA /* SearchWord.swift */; };
 		AFB6E0BA2993538E000509CA /* SearchCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6E0B92993538E000509CA /* SearchCategory.swift */; };
@@ -57,6 +61,10 @@
 		AF5B40DF29982E9300848368 /* GoodmorningFRE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = GoodmorningFRE.m4a; path = ../../../../../Desktop/sounds/GoodmorningFRE.m4a; sourceTree = "<group>"; };
 		AF5B40E029982E9400848368 /* BoardingAnnounc.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = BoardingAnnounc.m4a; path = ../../../../../Desktop/sounds/BoardingAnnounc.m4a; sourceTree = "<group>"; };
 		AF5B40E92998303C00848368 /* GoodmorningGER.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = GoodmorningGER.m4a; path = ../../../../GoodmorningGER.m4a; sourceTree = "<group>"; };
+		AF5B40EF29989FA400848368 /* GifAslView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifAslView.swift; sourceTree = "<group>"; };
+		AF5B40F52998AB5500848368 /* pokeball.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pokeball.GIF; path = ../../../pokeball.GIF; sourceTree = "<group>"; };
+		AF5B40F729995A8C00848368 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		AF5B40F929995CD800848368 /* GoodmorningASL.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GoodmorningASL.gif; sourceTree = "<group>"; };
 		AF78015A29941D250014154C /* SearchAnnounc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnnounc2.swift; sourceTree = "<group>"; };
 		AFB6E0B72993537B000509CA /* SearchWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWord.swift; sourceTree = "<group>"; };
 		AFB6E0B92993538E000509CA /* SearchCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategory.swift; sourceTree = "<group>"; };
@@ -121,6 +129,9 @@
 				AFB6E0BB2993539D000509CA /* SearchAnnounc.swift */,
 				AFB6E0BE299353C5000509CA /* SearchDialoge.swift */,
 				AF78015A29941D250014154C /* SearchAnnounc2.swift */,
+				AF5B40EF29989FA400848368 /* GifAslView.swift */,
+				AF5B40F729995A8C00848368 /* GifImage.swift */,
+				AF5B40F929995CD800848368 /* GoodmorningASL.gif */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 		AFCFDEE42992A86800BF1DB4 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				AF5B40F52998AB5500848368 /* pokeball.GIF */,
 				AFCFDEE52992A88D00BF1DB4 /* data.json */,
 				AF5B408F2998287F00848368 /* Sounds */,
 			);
@@ -263,8 +275,10 @@
 				AF5B40EA2998303C00848368 /* GoodmorningGER.m4a in Resources */,
 				AF5B40E829982E9400848368 /* BoardingAnnounc.m4a in Resources */,
 				AF5B408E2998283100848368 /* Goodmorning.m4a in Resources */,
+				AF5B40F62998AB5500848368 /* pokeball.GIF in Resources */,
 				AF5B40E329982E9400848368 /* GoodmorningITA.m4a in Resources */,
 				AF5B40E129982E9400848368 /* GoodmorningHEB.m4a in Resources */,
+				AF5B40FA29995CD800848368 /* GoodmorningASL.gif in Resources */,
 				AF5B40E229982E9400848368 /* BoardingAnnouncPOR.m4a in Resources */,
 				AFCFDEE62992A88D00BF1DB4 /* data.json in Resources */,
 				AF5B40E429982E9400848368 /* GoodmorningPOR.m4a in Resources */,
@@ -281,6 +295,7 @@
 			files = (
 				AF28BC4E2993019D00B08551 /* MenuView.swift in Sources */,
 				AFB6E0BA2993538E000509CA /* SearchCategory.swift in Sources */,
+				AF5B40F829995A8C00848368 /* GifImage.swift in Sources */,
 				AFB6E0B82993537B000509CA /* SearchWord.swift in Sources */,
 				AF28BC542993029A00B08551 /* FlashcardView.swift in Sources */,
 				AFB6E0BC2993539D000509CA /* SearchAnnounc.swift in Sources */,
@@ -291,6 +306,7 @@
 				AF78015B29941D250014154C /* SearchAnnounc2.swift in Sources */,
 				AF28BC522993028700B08551 /* SearchView.swift in Sources */,
 				AFCFDED62992A7F000BF1DB4 /* HomeView.swift in Sources */,
+				AF5B40F029989FA400848368 /* GifAslView.swift in Sources */,
 				AFCFDED42992A7F000BF1DB4 /* Dictonary_V1bApp.swift in Sources */,
 				AF28BC56299302A800B08551 /* FavoriteView.swift in Sources */,
 				AF28BC58299302D300B08551 /* LanguageView.swift in Sources */,

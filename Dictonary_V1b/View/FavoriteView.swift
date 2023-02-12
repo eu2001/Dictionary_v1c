@@ -40,7 +40,7 @@ class SoundManager {
 struct FavoriteView: View {
     @EnvironmentObject var model: ContentModel
     @State var audioPlayer: AVAudioPlayer?
-    
+    @State var showASLScreen: Bool = false
     var body: some View {
        
         ScrollView{
@@ -93,12 +93,17 @@ struct FavoriteView: View {
                                     Image(systemName: "speaker.fill")
                                 }
                             }
-                            HStack{Text("ASL:")
+                            HStack{
+                                Text("ASL:")
                                 Text(r.nameEng)
-                                Button { SoundManager.instance.playSound(sound: .Goodmorning) } label: {
-                                    Image(systemName: "play.fill")
-                                }
+                                VStack {
+                                    Button("ASL"){showASLScreen.toggle()}}.sheet(isPresented: $showASLScreen, content: {
+                                        GifAslView()})
                             }
+                                /* { showASLScreen.toggle() } label: {
+                                    Image(systemName: "play.fill")*/
+                                
+                           
                             
                         }
                             
