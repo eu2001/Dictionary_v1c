@@ -14,12 +14,15 @@ struct GifAslView: View {
         VStack(spacing: 30){
             HStack{
                 Spacer()
-                Button (action: { presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "xmark").foregroundColor(.black).font(.largeTitle).padding(20)})
+                  Button (action: { presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "xmark").foregroundColor(.black).font(.largeTitle).padding(20)})
             }
-            Spacer()
-
-            GifImage("GoodmorningASL")
-            Text("Good Morning").font(.title2)
+          
+            VStack(spacing: 0){
+                GifImage("GoodmorningASL")
+                Text("Good Morning").font(.title2).bold()
+                Spacer()
+            }.padding(.bottom, 120)
+          
             Spacer()
         }
         

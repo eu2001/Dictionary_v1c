@@ -38,7 +38,7 @@ struct HomeView: View {
                            }
                            NavigationLink("", destination:  MenuView(), isActive: $showWelcomeView)
                                
-                               Link(destination: URL(string:"https://www.globo.com")!, label: {
+                               Link(destination: URL(string:"https://www.amazon.com")!, label: {
                                    Text("Buy the Book Here").foregroundColor(.white)
                                        .fontWeight(.bold)
                                        .frame(minWidth: 0, maxWidth: 200)

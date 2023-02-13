@@ -15,14 +15,23 @@ struct SearchWord: View {
         NavigationView{
          
                 
-            /*   ForEach (model.books, id: \.self) { index in
-                   listofWords.append(index.nameEng)
-                }
-                */
+          
                 
                 List{
                     ForEach(words, id: \.self){ word in
-                        HStack {Text(word.capitalized)}
+                        HStack(spacing: 20) {Text(word.capitalized)
+                           Spacer()
+                            Button { } label: {
+                                Image(systemName: "play.fill").foregroundColor(.blue)}
+                                
+                            Button { } label: {
+                                Image(systemName: "star").foregroundColor(.yellow)
+                            }
+                            Button { } label: {
+                                Image(systemName: "arrowtriangle.down.fill").foregroundColor(.black)
+                            }
+
+                        }
                     }
                 }.searchable(text: $searchText)
             }
