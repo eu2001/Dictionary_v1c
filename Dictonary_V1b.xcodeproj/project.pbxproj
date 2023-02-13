@@ -42,6 +42,8 @@
 		AFCFDEE62992A88D00BF1DB4 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = AFCFDEE52992A88D00BF1DB4 /* data.json */; };
 		AFCFDEE82992A8BD00BF1DB4 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCFDEE72992A8BD00BF1DB4 /* ContentModel.swift */; };
 		AFCFDEEA2992A8F400BF1DB4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCFDEE92992A8F400BF1DB4 /* Model.swift */; };
+		AFE15F182999E7F6007EB68F /* OverheadBin.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AFE15F162999E7F5007EB68F /* OverheadBin.m4a */; };
+		AFE15F192999E7F6007EB68F /* OverheadBinPOR.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AFE15F172999E7F5007EB68F /* OverheadBinPOR.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,10 @@
 		AFCFDEE52992A88D00BF1DB4 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		AFCFDEE72992A8BD00BF1DB4 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		AFCFDEE92992A8F400BF1DB4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		AFE15F162999E7F5007EB68F /* OverheadBin.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = OverheadBin.m4a; path = ../../../../../Desktop/sounds/OverheadBin.m4a; sourceTree = "<group>"; };
+		AFE15F172999E7F5007EB68F /* OverheadBinPOR.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = OverheadBinPOR.m4a; path = ../../../../../Desktop/sounds/OverheadBinPOR.m4a; sourceTree = "<group>"; };
+		AFE15F1A2999E8C5007EB68F /* OverheadBin.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = OverheadBin.m4a; path = ../../View/OverheadBin.m4a; sourceTree = "<group>"; };
+		AFE15F1B2999E8C5007EB68F /* OverheadBinPOR.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = OverheadBinPOR.m4a; path = ../../View/OverheadBinPOR.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,10 @@
 		AF5B408F2998287F00848368 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				AFE15F162999E7F5007EB68F /* OverheadBin.m4a */,
+				AFE15F172999E7F5007EB68F /* OverheadBinPOR.m4a */,
+				AFE15F1A2999E8C5007EB68F /* OverheadBin.m4a */,
+				AFE15F1B2999E8C5007EB68F /* OverheadBinPOR.m4a */,
 				AF5B408D2998283100848368 /* Goodmorning.m4a */,
 				AF5B40E029982E9400848368 /* BoardingAnnounc.m4a */,
 				AF5B40DA29982E9200848368 /* BoardingAnnouncPOR.m4a */,
@@ -272,12 +282,14 @@
 				AF5B40E729982E9400848368 /* GoodmorningFRE.m4a in Resources */,
 				AFCFDEDB2992A7F300BF1DB4 /* Preview Assets.xcassets in Resources */,
 				AF5B40E629982E9400848368 /* GoodmorningSPA.m4a in Resources */,
+				AFE15F182999E7F6007EB68F /* OverheadBin.m4a in Resources */,
 				AF5B40EA2998303C00848368 /* GoodmorningGER.m4a in Resources */,
 				AF5B40E829982E9400848368 /* BoardingAnnounc.m4a in Resources */,
 				AF5B408E2998283100848368 /* Goodmorning.m4a in Resources */,
 				AF5B40F62998AB5500848368 /* pokeball.GIF in Resources */,
 				AF5B40E329982E9400848368 /* GoodmorningITA.m4a in Resources */,
 				AF5B40E129982E9400848368 /* GoodmorningHEB.m4a in Resources */,
+				AFE15F192999E7F6007EB68F /* OverheadBinPOR.m4a in Resources */,
 				AF5B40FA29995CD800848368 /* GoodmorningASL.gif in Resources */,
 				AF5B40E229982E9400848368 /* BoardingAnnouncPOR.m4a in Resources */,
 				AFCFDEE62992A88D00BF1DB4 /* data.json in Resources */,

@@ -100,9 +100,7 @@ struct FavoriteView: View {
                                     Button("ASL"){showASLScreen.toggle()}}.sheet(isPresented: $showASLScreen, content: {
                                         GifAslView()})
                             }
-                                /* { showASLScreen.toggle() } label: {
-                                    Image(systemName: "play.fill")*/
-                                
+                            
                            
                             
                         }
@@ -117,16 +115,7 @@ struct FavoriteView: View {
         } 
     }
    
-   /* func playSound() {
-        let pathToSound = Bundle.main.path(forResource:"good", ofType: "m4a")!
-        let url = URL(fileURLWithPath: pathToSound)
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.play()
-        }
-        catch { print (error)}
-    }*/
-
+  
 }
 
 

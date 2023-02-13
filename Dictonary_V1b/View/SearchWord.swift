@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct SearchWord: View {
-    var listofWords = ["Airplane", "Airport", "Good Morning","Overhead Bin","Boarding"]
+     var listofWords = ["Airplane", "Airport", "Good Morning","Overhead Bin","Boarding"]
+  //  var listofWords = model.books
     @State var searchText = ""
     @EnvironmentObject var model: ContentModel
     var body: some View {
         NavigationView{
-         
-                
-          
-                
-                List{
+             List{
                     ForEach(words, id: \.self){ word in
                         HStack(spacing: 20) {Text(word.capitalized)
                            Spacer()
