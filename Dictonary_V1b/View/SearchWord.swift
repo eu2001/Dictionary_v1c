@@ -17,7 +17,7 @@ struct SearchWord: View {
              List{
                     ForEach(words, id: \.self){ word in
                         HStack(spacing: 20) {Text(word.capitalized)
-                           Spacer()
+                           Spacer() 
                             Button { } label: {
                                 Image(systemName: "play.fill").foregroundColor(.blue)}
                                 

@@ -1,6 +1,7 @@
 [{
         "id": 1,
         "chapter": 1,
+        "isFavourite": false,
         "nameEng": "Good Morning",
         "audioEng": "https://github.com/eu2001/audiosDictionary.git/Goodmorning.m4a",
         "translitEng": "Good Morning",
@@ -19,13 +20,14 @@
         "nameFre": "Bonjour",
         "translitFre": "bong-joor",
         "audioFre": "https://github.com/eu2001/audiosDictionary.git/GoodmorningFRE.m4a",
-        "nameheb": "שלום",
+        "nameheb": "בוקר טוב",
         "audioheb": "https://github.com/eu2001/audiosDictionary.git/GoodmorningHEB.m4a"
 
     },
     {
         "id": 2,
         "chapter": 2,
+        "isFavourite": false,
         "nameEng": "Airplane",
         "audioEng": "wwww.youtube.com",
         "translitEng": "Air-plai-ne",
@@ -51,6 +53,7 @@
     {
         "id": 3,
         "chapter": 3,
+        "isFavourite": false,
         "nameEng": "Airport",
         "audioEng": "wwww.youtube.com",
         "translitEng": "Air-plai-ne",
@@ -76,6 +79,7 @@
     {
         "id": 4,
         "chapter": 4,
+        "isFavourite": false,
         "nameEng": "Boarding",
         "audioEng": "wwww.youtube.com",
         "translitEng": "Welcome aboard flight number 27 to London. We would like to thank you for flying with us. Our flight time will be approximately 8 hours and we expect to arrive at our destination at 10:30am. We kindly ask that as you find your seat, please stow your smaller items under the seat in front of you and the larger carry-on bags in the overhead bins.",
@@ -100,6 +104,7 @@
     {
         "id": 5,
         "chapter": 5,
+        "isFavourite": false,
         "nameEng": "Overhead bin",
         "audioEng": "wwww.youtube.com",
         "translitEng": "Excuse me. It looks like all the overhead bins are full and I can’t find space for my bag. Will I need to check it?",

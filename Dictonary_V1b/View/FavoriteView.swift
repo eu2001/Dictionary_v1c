@@ -52,10 +52,11 @@ struct FavoriteView: View {
                        
                         Rectangle().background(.white).foregroundColor(.white).cornerRadius(15).shadow(color: .gray, radius: 5, x: 5, y: 5).aspectRatio(CGSize(width:335, height: 230),contentMode: .fit)
                         VStack(alignment: .leading){ HStack {
-                            Button(action: {SoundManager.instance.playSound(sound: .Goodmorning) }) {
-                                Image(systemName: "star.fill").resizable().frame(width: 15, height: 15).foregroundColor(.yellow)
+                            Button(action: { }) {
+                                Image(systemName: "star.fill").resizable().frame(width: 15, height: 15).foregroundColor(.yellow)}
+                            Button(action: {SoundManager.instance.playSound(sound: .Goodmorning) }) { Text(r.nameEng).fontWeight(.bold).foregroundColor(Color.blue)}}
                                
-                                Text(r.nameEng).fontWeight(.bold).foregroundColor(Color.blue)}}
+                               
                             HStack{Text("SPA:")
                                                            Text(r.nameEsp)
                                 Button { SoundManager.instance.playSound(sound: .GoodmorningSPA) } label: {

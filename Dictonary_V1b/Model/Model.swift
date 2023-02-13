@@ -11,6 +11,7 @@ struct Book : Decodable, Identifiable {
     
     var id: Int
     var chapter: Int
+    var isFavourite: Bool
     var nameEng: String
     var  audioEng: String
     var translitEng: String

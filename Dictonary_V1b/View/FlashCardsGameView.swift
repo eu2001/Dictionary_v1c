@@ -11,6 +11,9 @@ struct FlashCardsGameView: View {
     @EnvironmentObject var model: ContentModel
     @State var pickerIndex = "GER"
     @State var pickerIndexChap = "AIR"
+    @State var cartao = true
+    @State private var fillColor: UIColor = UIColor.blue
+   
         var cardColor: Color {
                 return Color(
                     .sRGB,
@@ -20,7 +23,8 @@ struct FlashCardsGameView: View {
                     opacity: 0.8
                 )
             }
-    @State var texto = "Good Morning"
+    @State var texto = "nameEng"
+  //  var nomecomp = "r." + texto
         var body: some View {
             VStack{
                 Text("Flashcards")
@@ -53,7 +57,7 @@ struct FlashCardsGameView: View {
                         .fontWeight(.medium)
                         .foregroundColor(Color.black).tag("FAV")
                     
-                }.padding(.all, 5.0).accentColor(.white).font(.title3).background(.blue).cornerRadius(20)
+                }.padding(.all, 5.0).accentColor(.white).font(.title3).background(.blue).cornerRadius(20).opacity(0.8)
                 
                 Spacer()
                 
@@ -79,42 +83,47 @@ struct FlashCardsGameView: View {
                     
                     ForEach (model.books){
                         r in
-                        
                         ZStack{
-                            VStack{
-                                Rectangle().background(.white).foregroundColor(cardColor).frame(minWidth: 0,  maxWidth: 300, minHeight: 0, maxHeight: 200,  alignment: .center).cornerRadius(25).shadow(color: .gray, radius: 7, x: 7, y: 7).onTapGesture { texto = r.nameGer}
+                            VStack(alignment: .center){
+                                ZStack{ Rectangle().background(.white).foregroundColor(Color(fillColor)).frame(minWidth: 0,  maxWidth: 300, minHeight: 0, maxHeight: 210,  alignment: .center).cornerRadius(25).shadow(color: .gray, radius: 7, x: 7, y: 7).opacity(0.45).onTapGesture {
+                                    
+                                    mudacor(r)
+                                }
+                                //var textComp = "r." + texto
+                                    Text(texto)
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color.white)
+                                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)}
+                                .padding(.bottom)
+                                
+                                HStack{
+                                    Spacer()
+                                    Button {} label: {
+                                        VStack(spacing:0){ Image(systemName: "star.fill").foregroundColor(.white).padding(.all).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.yellow).cornerRadius(45)
+                                            Text("Favorites").font(.caption2).foregroundColor(.black)}
+                                    }
+                                    
+                                    
+                                    Spacer()
+                                    Button {SoundManager.instance.playSound(sound: .GoodmorningGER)} label: {
+                                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 60, maxWidth: 60, minHeight: 30, idealHeight: 60, maxHeight: 60, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
+                                    }
+                                    
+                                    
+                                    Spacer()
+                                    Button {} label: {
+                                        Image(systemName: "tortoise.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
+                                    Spacer()
+                                    
+                                }.padding(.bottom, 25)
+                                
                             }
-                            VStack{
-                                Text(texto)
-                                    .font(.title2)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(Color.white)
-                                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                            }
+                 
                         }
+                        
                     } }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic)).indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always)).padding(.bottom, 20)
-                Spacer()
-                HStack{
-                    Spacer()
-                    Button {} label: {
-                        VStack(spacing:0){ Image(systemName: "star.fill").foregroundColor(.white).padding(.all).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.yellow).cornerRadius(45)
-                            Text("Favorites").font(.caption2).foregroundColor(.black)}
-                    }
-                    
-                    
-                    Spacer()
-                    Button {SoundManager.instance.playSound(sound: .GoodmorningGER)} label: {
-                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 60, maxWidth: 60, minHeight: 30, idealHeight: 60, maxHeight: 60, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
-                    }
-                    
-                    
-                    Spacer()
-                    Button {} label: {
-                        Image(systemName: "tortoise.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
-                    Spacer()
-                    
-                }.padding(.bottom, 25)
-                Spacer()
+                
                 
             }
             
@@ -135,6 +144,20 @@ struct FlashCardsGameView: View {
         return band
 
     }
+    
+    func mudacor(_  index: Book) -> Bool {
+      if cartao == false
+        {fillColor = UIColor.blue
+          texto = index.nameEng
+          cartao = true
+      }
+        else if cartao == true {fillColor = UIColor.red
+          texto = index.nameGer
+            cartao = false
+        }
+        return cartao
+    }
+
 }
 
 struct FlashCardsGameView_Previews: PreviewProvider {
