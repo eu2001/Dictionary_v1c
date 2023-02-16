@@ -14,7 +14,7 @@ struct SearchWord: View {
     @EnvironmentObject var model: ContentModel
     var body: some View {
         NavigationView{
-            
+      
              List{
                     ForEach(words, id: \.self){ word in
                         HStack(spacing: 20) {Text(word.capitalized)

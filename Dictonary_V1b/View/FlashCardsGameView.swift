@@ -63,16 +63,16 @@ struct FlashCardsGameView: View {
                         .fontWeight(.medium)
                         .foregroundColor(Color.black).tag("FAV")
                     
-                }.padding(.all, 5.0).accentColor(.white).font(.title3).background(.blue).cornerRadius(20).opacity(0.8)
+                }.padding(.all, 5.0).accentColor(.white).font(.title3).background(.blue).cornerRadius(20).opacity(0.8).shadow(color: .blue , radius: 3)
                 
                 Spacer()
                 
                 HStack(alignment: .center, spacing:20){
-                    VStack{Image("english").resizable().scaledToFill().frame(minWidth: 30, idealWidth: 70, maxWidth: 70, minHeight: 30, idealHeight: 70, maxHeight: 70, alignment: .center).cornerRadius(45)
+                    VStack(spacing:5){Image("english").resizable().scaledToFill().frame( maxWidth: 70,  maxHeight: 70, alignment: .center).cornerRadius(50).shadow(radius: 5)
                         Text("English")
-                    }.frame(width: 70.0, height: 90.0)
+                    }.frame(width: 70.0, height: 90)
                     Image(systemName: "arrow.right.circle").resizable().frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center)
-                    VStack(spacing:0){ Image(bandeira()).resizable().scaledToFill().frame(minWidth: 30, idealWidth: 70, maxWidth: 70, minHeight: 30, idealHeight: 70, maxHeight: 70, alignment: .center).cornerRadius(45)
+                    VStack(spacing:5){ Image(bandeira()).resizable().scaledToFill().frame( maxWidth: 70,  maxHeight: 70, alignment: .center).cornerRadius(45).shadow(radius: 5)
                         Picker("", selection: $pickerIndex)
                         {   Text("Spanish").tag("ESP")
                             Text("French").tag("FRE")
@@ -82,16 +82,16 @@ struct FlashCardsGameView: View {
                             Text("Hebrew").tag("HEB")
                             Text("ASL").tag("ASL")
                         }
-                        .frame(width: 200.0, height: 30).accentColor(.black)
+                        .frame(width: 200.0, height: 20).accentColor(.black)
                     }.frame(width: 70.0, height: 90.0)
-                }.padding(.horizontal, 20 )
+                }.padding(.horizontal, 20 ).padding(.vertical, 20)
                 TabView {
                     
                     ForEach (model.books){
                         r in
                         ZStack{
                             VStack(alignment: .center){
-                                ZStack{ Rectangle().background(.white).foregroundColor(Color(fillColor)).frame(minWidth: 0,  maxWidth: 300, minHeight: 0, maxHeight: 210,  alignment: .center).cornerRadius(25).shadow(color: .gray, radius: 7, x: 7, y: 7).opacity(0.45).onTapGesture {
+                                ZStack{ Rectangle().background(.white).foregroundColor(Color(fillColor)).frame(  maxWidth: 300, maxHeight: 210,  alignment: .center).cornerRadius(25).shadow(color: .gray, radius: 7, x: 7, y: 7).opacity(0.45).onTapGesture {
                                  mudacor(r)
                                 }
                             
@@ -102,27 +102,31 @@ struct FlashCardsGameView: View {
                                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)}
                                 .padding(.bottom)
                                 
-                                HStack{
+                                HStack(spacing:30){
                                     Spacer()
                                     Button {} label: {
-                                        VStack{
+                                       
                                             ZStack{
-                                                Image(systemName: "star.fill").foregroundColor(.white).padding(.all)
-                                                Circle().stroke().frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).foregroundColor(.yellow)
-                                            }
-                                            Text("Favorites").font(.caption2).foregroundColor(.black)}
+                                              
+                                                Circle().frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).foregroundColor(.white)
+                                                Circle().stroke().frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).foregroundColor(.yellow).shadow(color: .yellow, radius: 3).opacity(0.8)
+                                                Image(systemName: "star").foregroundColor(.yellow).padding(.all)
+                                                
+                                              }
+                                           
                                     }
                                     
                                     
-                                    Spacer()
+                                  
                                     Button {SoundManager.instance.playSound(sound: .GoodmorningGER)} label: {
-                                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 60, maxWidth: 60, minHeight: 30, idealHeight: 60, maxHeight: 60, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)
-                                    }
+                                        Image(systemName: "speaker.fill").padding(20).foregroundColor(.white).background( Circle().shadow(color: .blue, radius: 3).frame( maxWidth: 70, maxHeight: 70, alignment: .center))}
                                     
                                     
-                                    Spacer()
+                                  
                                     Button {} label: {
-                                        Image(systemName: "tortoise.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
+                                        Image(systemName: "tortoise.fill").padding(20).foregroundColor(.white).background( Circle().frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).shadow(color: .blue, radius: 3))}
+                                        
+                                    
                                     Spacer()
                                     
                                 }.padding(.bottom, 25)

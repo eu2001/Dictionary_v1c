@@ -13,7 +13,7 @@ struct SearchView: View {
       //  VStack(alignment: .leading){
           //  Text("Search").font(.title).bold().padding([.leading, .bottom, .trailing], 20.0)
        
-            NavigationView {
+           
                 ZStack{
                     Rectangle().fill(
                         LinearGradient(
@@ -45,7 +45,7 @@ struct SearchView: View {
                             .cornerRadius(10)})
                     }.navigationBarHidden(false).padding(.bottom)
                 }
-            }}
+            }
         
     //}.padding(.horizontal)
         

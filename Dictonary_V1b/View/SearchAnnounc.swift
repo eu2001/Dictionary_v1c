@@ -33,17 +33,17 @@ struct SearchAnnounc: View {
                         Text("Italian").tag("ITA")
                         Text("Hebrew").tag("HEB")
                         Text("ASL").tag("ASL")
-                    }.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15)}.accentColor(.white)
+                    }.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15).shadow(color: .blue , radius: 3)}.accentColor(.white)
                 
                 HStack{
                     Text("Select the Announcement: ").font(.subheadline).bold()
                     
                     Picker("Announcement", selection: $pickerAnou){
                         ForEach(anuncios, id: \.self){ index in
-                            Text(index).tag(String(index))}}.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15)}.accentColor(.white)
+                            Text(index).tag(String(index))}}.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15).shadow(color: .blue , radius: 3)}.accentColor(.white)
                 
                 ScrollView {
-                    VStack(alignment: .center, spacing: 20.0)
+                    VStack(alignment: .center, spacing: 10.0)
                     {
                         Spacer()
                         ZStack{
@@ -51,7 +51,7 @@ struct SearchAnnounc: View {
                             VStack{
                                 HStack{
                                     Button { SoundManager.instance.playSound(sound: .BoardingAnnounc) } label: {
-                                        Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
+                                        Image(systemName: "speaker.fill").padding(20).foregroundColor(.white).background( Circle().shadow(color: .blue, radius: 3).frame( maxWidth: 50, maxHeight: 50, alignment: .center))}
                                     Text(model.books[3].nameEng)
                                         .font(.title3)
                                    Spacer()
@@ -62,14 +62,14 @@ struct SearchAnnounc: View {
                             .padding(.all, 20.0)
                             
                         }
-                        
+                        Spacer()
                         Divider()
                         Spacer()
                         ZStack{
                             Rectangle().foregroundColor(.white).frame(maxWidth: .infinity).cornerRadius(25).padding(.horizontal, 5).shadow(color: .gray, radius: 4, x: 7, y: 7)
                             VStack{
                                 HStack{  Button { SoundManager.instance.playSound(sound: .BoardingAnnouncPOR) } label: {
-                                    Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
+                                    Image(systemName: "speaker.fill").padding(20).foregroundColor(.white).background( Circle().shadow(color: .blue, radius: 3).frame( maxWidth: 50, maxHeight: 50, alignment: .center))}
                                     Text(model.books[3].namePort)
                                         .font(.title3)
                                     Spacer()
@@ -87,18 +87,7 @@ struct SearchAnnounc: View {
                     .padding(/*@START_MENU_TOKEN@*/.vertical, 20.0/*@END_MENU_TOKEN@*/)
                 }
                 
-                /*  NavigationView{
-                 VStack{
-                 
-                 List(anuncios, id: \.self){ index in
-                 NavigationLink(destination: SearchAnnounc2(), label:{Text(index)} )
-                 
-                 
-                 }
-                 }
-                 } */
-                
-                // }.padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).navigationBarHidden(false)
+             
             }
             .padding(.horizontal, 10.0)}}
 }

@@ -19,7 +19,8 @@ struct SearchDialoge: View {
                     gradient: Gradient(colors: [Color(#colorLiteral(red: 0.610079325, green: 0.9385074156, blue: 1, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))]),
                     startPoint: .topLeading,
                     endPoint: .bottom)).ignoresSafeArea()
-            VStack(alignment: .center){
+           
+            VStack(alignment: .leading){
                 Text("Dialogues").font(.title).bold()
                 HStack{
                     Text("Select the Language: ").font(.subheadline).bold()
@@ -31,52 +32,58 @@ struct SearchDialoge: View {
                         Text("Italian").tag("ITA")
                         Text("Hebrew").tag("HEB")
                         Text("ASL").tag("ASL")
-                    }.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15)}.accentColor(.white)
+                    }.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15).shadow(color: .blue , radius: 3)}.accentColor(.white)
                 
                 HStack{
                     Text("Select the Dialogue: ").font(.subheadline).bold()
                     
                     Picker("Announcement", selection: $pickerAnou){
                         ForEach(anuncios, id: \.self){ index in
-                            Text(index).tag(String(index))}}.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15)}.accentColor(.white)
+                            Text(index).tag(String(index))}}.padding(.bottom, 5.0).background(.blue).opacity(0.8).cornerRadius(15).shadow(color: .blue , radius: 3)}.accentColor(.white)
                 
-                ScrollView { VStack(alignment: .leading, spacing: 20.0)
+                
+                
+                ScrollView { VStack(alignment: .leading, spacing: 10.0)
                     {
                         Spacer()
-                        HStack{
-                            Button {SoundManager.instance.playSound(sound: .Goodmorning) } label: {
-                                Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
-                            Text(model.books[4].nameEng)
-                                .font(.title3)
-                            
-                        }
-                        Text(model.books[4].translitEng)
-                            .multilineTextAlignment(.leading)
-                        
+                        ZStack{
+                            Rectangle().foregroundColor(.white).frame(maxWidth: .infinity).cornerRadius(25).padding(.horizontal, 5).shadow(color: .gray, radius: 4, x: 7, y: 7)
+                            VStack(alignment: .leading){
+                                HStack{
+                                    Button {SoundManager.instance.playSound(sound: .Goodmorning) } label: {
+                                        Image(systemName: "speaker.fill").padding(20).foregroundColor(.white).background( Circle().shadow(color: .blue, radius: 3).frame( maxWidth: 50, maxHeight: 50, alignment: .center))}
+                                    Text(model.books[4].nameEng)
+                                        .font(.title3)
+                                    
+                                }
+                                Text(model.books[4].translitEng)
+                                .multilineTextAlignment(.leading)}
+                            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)}
+                        Spacer()
                         Divider()
                         Spacer()
-                        HStack{  Button { SoundManager.instance.playSound(sound: .GoodmorningPOR)
+                        ZStack{
+                            Rectangle().foregroundColor(.white).frame(maxWidth: .infinity).cornerRadius(25).padding(.horizontal, 5).shadow(color: .gray, radius: 4, x: 7, y: 7)
                             
-                        } label: {
-                            Image(systemName: "speaker.fill").padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.blue).foregroundColor(.white).cornerRadius(45)}
-                            Text(model.books[4].namePort)
-                                .font(.title3)
+                            VStack(alignment: .leading){
+                                HStack{  Button { SoundManager.instance.playSound(sound: .GoodmorningPOR)
+                                    
+                                } label: {
+                                    Image(systemName: "speaker.fill").padding(20).foregroundColor(.white).background( Circle().shadow(color: .blue, radius: 3).frame( maxWidth: 50, maxHeight: 50, alignment: .center))}
+                                    Text(model.books[4].namePort)
+                                        .font(.title3)
+                                    
+                                }
+                                Text(model.books[4].translitPor)
+                                .multilineTextAlignment(.leading)}
+                            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                             
-                        }
-                        Text(model.books[4].translitPor)
-                            .multilineTextAlignment(.leading)
-                        
-                        Spacer()
-                        
-                        
-                        
-                    }.padding(/*@START_MENU_TOKEN@*/.vertical, 20.0/*@END_MENU_TOKEN@*/)
+                            Spacer()
+                       
+                        }}
                 }
-                
-                
-                
-                
-            }.padding(.horizontal, 30.0)}}
+            
+            }.padding(.horizontal, 10)}}
 }
 
 struct SearchDialoge_Previews: PreviewProvider {
