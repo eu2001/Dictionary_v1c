@@ -10,7 +10,6 @@
 		AF28BC4E2993019D00B08551 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC4D2993019D00B08551 /* MenuView.swift */; };
 		AF28BC502993027600B08551 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC4F2993027600B08551 /* HelpView.swift */; };
 		AF28BC522993028700B08551 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC512993028700B08551 /* SearchView.swift */; };
-		AF28BC542993029A00B08551 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC532993029A00B08551 /* FlashcardView.swift */; };
 		AF28BC56299302A800B08551 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC55299302A800B08551 /* FavoriteView.swift */; };
 		AF28BC58299302D300B08551 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC57299302D300B08551 /* LanguageView.swift */; };
 		AF28BC5A299305CB00B08551 /* FlashCardsGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28BC59299305CB00B08551 /* FlashCardsGameView.swift */; };
@@ -27,7 +26,6 @@
 		AF5B40F62998AB5500848368 /* pokeball.GIF in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40F52998AB5500848368 /* pokeball.GIF */; };
 		AF5B40F829995A8C00848368 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B40F729995A8C00848368 /* GifImage.swift */; };
 		AF5B40FA29995CD800848368 /* GoodmorningASL.gif in Resources */ = {isa = PBXBuildFile; fileRef = AF5B40F929995CD800848368 /* GoodmorningASL.gif */; };
-		AF78015B29941D250014154C /* SearchAnnounc2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78015A29941D250014154C /* SearchAnnounc2.swift */; };
 		AFB6E0B82993537B000509CA /* SearchWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6E0B72993537B000509CA /* SearchWord.swift */; };
 		AFB6E0BA2993538E000509CA /* SearchCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6E0B92993538E000509CA /* SearchCategory.swift */; };
 		AFB6E0BC2993539D000509CA /* SearchAnnounc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6E0BB2993539D000509CA /* SearchAnnounc.swift */; };
@@ -50,7 +48,6 @@
 		AF28BC4D2993019D00B08551 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AF28BC4F2993027600B08551 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		AF28BC512993028700B08551 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		AF28BC532993029A00B08551 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		AF28BC55299302A800B08551 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		AF28BC57299302D300B08551 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		AF28BC59299305CB00B08551 /* FlashCardsGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardsGameView.swift; sourceTree = "<group>"; };
@@ -67,7 +64,6 @@
 		AF5B40F52998AB5500848368 /* pokeball.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = pokeball.GIF; path = ../../../pokeball.GIF; sourceTree = "<group>"; };
 		AF5B40F729995A8C00848368 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		AF5B40F929995CD800848368 /* GoodmorningASL.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = GoodmorningASL.gif; path = ../View/GoodmorningASL.gif; sourceTree = "<group>"; };
-		AF78015A29941D250014154C /* SearchAnnounc2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnnounc2.swift; sourceTree = "<group>"; };
 		AFB6E0B72993537B000509CA /* SearchWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWord.swift; sourceTree = "<group>"; };
 		AFB6E0B92993538E000509CA /* SearchCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategory.swift; sourceTree = "<group>"; };
 		AFB6E0BB2993539D000509CA /* SearchAnnounc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnnounc.swift; sourceTree = "<group>"; };
@@ -127,7 +123,6 @@
 				AF28BC4F2993027600B08551 /* HelpView.swift */,
 				AF28BC4D2993019D00B08551 /* MenuView.swift */,
 				AF28BC512993028700B08551 /* SearchView.swift */,
-				AF28BC532993029A00B08551 /* FlashcardView.swift */,
 				AF28BC59299305CB00B08551 /* FlashCardsGameView.swift */,
 				AF28BC55299302A800B08551 /* FavoriteView.swift */,
 				AF28BC57299302D300B08551 /* LanguageView.swift */,
@@ -135,7 +130,6 @@
 				AFB6E0B92993538E000509CA /* SearchCategory.swift */,
 				AFB6E0BB2993539D000509CA /* SearchAnnounc.swift */,
 				AFB6E0BE299353C5000509CA /* SearchDialoge.swift */,
-				AF78015A29941D250014154C /* SearchAnnounc2.swift */,
 				AF5B40EF29989FA400848368 /* GifAslView.swift */,
 			);
 			path = View;
@@ -309,13 +303,11 @@
 				AFB6E0BA2993538E000509CA /* SearchCategory.swift in Sources */,
 				AF5B40F829995A8C00848368 /* GifImage.swift in Sources */,
 				AFB6E0B82993537B000509CA /* SearchWord.swift in Sources */,
-				AF28BC542993029A00B08551 /* FlashcardView.swift in Sources */,
 				AFB6E0BC2993539D000509CA /* SearchAnnounc.swift in Sources */,
 				AFB6E0BF299353C5000509CA /* SearchDialoge.swift in Sources */,
 				AF28BC502993027600B08551 /* HelpView.swift in Sources */,
 				AFCFDEE82992A8BD00BF1DB4 /* ContentModel.swift in Sources */,
 				AF28BC5A299305CB00B08551 /* FlashCardsGameView.swift in Sources */,
-				AF78015B29941D250014154C /* SearchAnnounc2.swift in Sources */,
 				AF28BC522993028700B08551 /* SearchView.swift in Sources */,
 				AFCFDED62992A7F000BF1DB4 /* HomeView.swift in Sources */,
 				AF5B40F029989FA400848368 /* GifAslView.swift in Sources */,

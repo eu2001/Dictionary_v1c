@@ -9,7 +9,14 @@ import SwiftUI
 
 struct HelpView: View {
     var body: some View {
-        ScrollView{
+        ZStack{
+            Rectangle().fill(
+             LinearGradient(
+                gradient: Gradient(colors: [Color(#colorLiteral(red: 0.610079325, green: 0.9385074156, blue: 1, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))]),
+                              startPoint: .topLeading,
+                              endPoint: .bottom)).ignoresSafeArea()
+            
+            ScrollView{
             VStack(alignment: .center, spacing: 20.0){
                 Text("Help")
                     .font(.title).bold()
@@ -23,8 +30,8 @@ struct HelpView: View {
                 Text("how to use it ")
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)}
-    }
-}
+        }
+    }}
 
 
 struct HelpView_Previews: PreviewProvider {

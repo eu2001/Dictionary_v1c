@@ -27,6 +27,7 @@ struct HomeView: View {
                            Spacer()
                            
                            VStack {
+                        
                            Button(action: { showWelcomeView = true }) {
                                Text("Click Here to Start").foregroundColor(.white)
                                    .fontWeight(.bold)

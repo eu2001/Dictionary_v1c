@@ -9,6 +9,8 @@ import Foundation
 
 struct Book : Decodable, Identifiable {
     
+      
+    
     var id: Int
     var chapter: Int
     var isFavourite: Bool
@@ -35,3 +37,6 @@ struct Book : Decodable, Identifiable {
    
     
 }
+
+
+

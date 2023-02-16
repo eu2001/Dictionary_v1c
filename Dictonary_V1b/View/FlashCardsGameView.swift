@@ -11,8 +11,8 @@ struct FlashCardsGameView: View {
     @EnvironmentObject var model: ContentModel
     @State var pickerIndex = "GER"
     @State var pickerIndexChap = "AIR"
-    @State var cartao = true
-    @State private var fillColor: UIColor = UIColor.blue
+    @State var cartao = false
+    @State private var fillColor: UIColor = UIColor.systemGray6
    
         var cardColor: Color {
                 return Color(
@@ -23,10 +23,16 @@ struct FlashCardsGameView: View {
                     opacity: 0.8
                 )
             }
-    @State var texto = "nameEng"
+    @State var texto = "Click Here to Start"
   //  var nomecomp = "r." + texto
         var body: some View {
-            VStack{
+            ZStack{
+                Rectangle().fill(
+                 LinearGradient(
+                    gradient: Gradient(colors: [Color(#colorLiteral(red: 0.610079325, green: 0.9385074156, blue: 1, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))]),
+                                  startPoint: .topLeading,
+                                  endPoint: .bottom)).ignoresSafeArea()
+                    VStack{
                 Text("Flashcards")
                     .font(.title)
                     .fontWeight(.bold)
@@ -86,10 +92,9 @@ struct FlashCardsGameView: View {
                         ZStack{
                             VStack(alignment: .center){
                                 ZStack{ Rectangle().background(.white).foregroundColor(Color(fillColor)).frame(minWidth: 0,  maxWidth: 300, minHeight: 0, maxHeight: 210,  alignment: .center).cornerRadius(25).shadow(color: .gray, radius: 7, x: 7, y: 7).opacity(0.45).onTapGesture {
-                                    
-                                    mudacor(r)
+                                 mudacor(r)
                                 }
-                                //var textComp = "r." + texto
+                            
                                     Text(texto)
                                         .font(.title2)
                                         .fontWeight(.bold)
@@ -100,7 +105,11 @@ struct FlashCardsGameView: View {
                                 HStack{
                                     Spacer()
                                     Button {} label: {
-                                        VStack(spacing:0){ Image(systemName: "star.fill").foregroundColor(.white).padding(.all).frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).background(.yellow).cornerRadius(45)
+                                        VStack{
+                                            ZStack{
+                                                Image(systemName: "star.fill").foregroundColor(.white).padding(.all)
+                                                Circle().stroke().frame(minWidth: 30, idealWidth: 50, maxWidth: 50, minHeight: 30, idealHeight: 50, maxHeight: 50, alignment: .center).foregroundColor(.yellow)
+                                            }
                                             Text("Favorites").font(.caption2).foregroundColor(.black)}
                                     }
                                     
@@ -125,7 +134,9 @@ struct FlashCardsGameView: View {
                     } }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic)).indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always)).padding(.bottom, 20)
                 
                 
-            }
+                    }
+                    
+                    }
             
             
         }
@@ -144,7 +155,7 @@ struct FlashCardsGameView: View {
         return band
 
     }
-    
+
     func mudacor(_  index: Book) -> Bool {
       if cartao == false
         {fillColor = UIColor.blue
@@ -152,7 +163,19 @@ struct FlashCardsGameView: View {
           cartao = true
       }
         else if cartao == true {fillColor = UIColor.red
-          texto = index.nameGer
+        /*//colocar o name + lingua
+            var band2 = pickerIndex
+            switch band2 { case "ESP": band2 = "index.nameEsp"
+            case "FRE": band2 = "index.nameFre"
+            case "GER": band2 = "index.nameGer"
+            case "POR": band2 = "index.namePort"
+            case "ITA": band2 = "index.nameIta"
+            case "HEB": band2 = "index.nameheb"
+            case "ASL": band2 = "index.nameAsl"
+             default:
+            band2 =  "german"
+            } */
+            texto = index.nameGer
             cartao = false
         }
         return cartao
