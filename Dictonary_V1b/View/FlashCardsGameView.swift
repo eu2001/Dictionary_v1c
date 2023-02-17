@@ -31,7 +31,7 @@ struct FlashCardsGameView: View {
                  LinearGradient(
                     gradient: Gradient(colors: [Color(#colorLiteral(red: 0.610079325, green: 0.9385074156, blue: 1, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))]),
                                   startPoint: .topLeading,
-                                  endPoint: .bottom)).ignoresSafeArea()
+                                  endPoint: .bottom)).opacity(0.8).ignoresSafeArea()
                     VStack{
                 Text("Flashcards")
                     .font(.title)
@@ -91,9 +91,7 @@ struct FlashCardsGameView: View {
                         r in
                         ZStack{
                             VStack(alignment: .center){
-                                ZStack{ Rectangle().background(.white).foregroundColor(Color(fillColor)).frame(  maxWidth: 300, maxHeight: 210,  alignment: .center).cornerRadius(25).shadow(color: .gray, radius: 7, x: 7, y: 7).opacity(0.45).onTapGesture {
-                                 mudacor(r)
-                                }
+                                ZStack{ Rectangle().background(.white).foregroundColor(Color(fillColor)).frame(  maxWidth: 300, maxHeight: 210,  alignment: .center).cornerRadius(25).shadow(color: .gray, radius: 7, x: 7, y: 7).opacity(0.45).onTapGesture {  mudacor(r)}.onAppear{ cartao = false}
                             
                                     Text(texto)
                                         .font(.title2)

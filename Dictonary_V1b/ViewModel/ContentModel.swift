@@ -4,6 +4,8 @@
 //
 //  Created by Eric Sousa on 2/7/23.
 //
+import SwiftUI
+import AVKit
 
 import Foundation
 class ContentModel: ObservableObject {
@@ -43,3 +45,44 @@ class ContentModel: ObservableObject {
             books[index].isFavourite.toggle()
         }
     }}
+
+
+
+class SoundManager {
+    static let instance = SoundManager ()
+    var player: AVAudioPlayer?
+    enum SoundOption: String {
+        case Airplane
+        case AirplaneESP
+        case AirplaneGER
+        case AirplaneHEB
+        case AiplanePOR
+        case AirplaneITA
+        case AirplaneFRE
+        case Goodmorning
+        case GoodmorningPOR
+        case GoodmorningSPA
+        case GoodmorningITA
+        case GoodmorningFRE
+        case GoodmorningGER
+        case GoodmorningHEB
+        case BoardingAnnounc
+        case BoardingAnnouncPOR
+    }
+    func playSound(sound: SoundOption) {
+        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: "m4a") else { return }
+        do{ player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch { print ("Error playing")}
+    }
+}
+/*
+class LanguagesShow {
+    init() { showSelections() }
+    // @Published var selections = LanguageView.
+    func showSelections() {
+        @State var selections = LanguageView()
+        if selections.showSPA ? :
+            
+    }}
+  */

@@ -4,38 +4,8 @@
 //
 //  Created by Eric Sousa on 2/7/23.
 //
-
 import SwiftUI
 import AVKit
-
-class SoundManager {
-    static let instance = SoundManager ()
-    var player: AVAudioPlayer?
-    enum SoundOption: String {
-        case Airplane
-        case AirplaneESP
-        case AirplaneGER
-        case AirplaneHEB
-        case AiplanePOR
-        case AirplaneITA
-        case AirplaneFRE
-        case Goodmorning
-        case GoodmorningPOR
-        case GoodmorningSPA
-        case GoodmorningITA
-        case GoodmorningFRE
-        case GoodmorningGER
-        case GoodmorningHEB
-        case BoardingAnnounc
-        case BoardingAnnouncPOR
-    }
-    func playSound(sound: SoundOption) {
-        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: "m4a") else { return }
-        do{ player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
-        } catch { print ("Error playing")}
-    }
-}
 
 struct FavoriteView: View {
     @EnvironmentObject var model: ContentModel
@@ -48,7 +18,7 @@ struct FavoriteView: View {
                 LinearGradient(
                     gradient: Gradient(colors: [Color(#colorLiteral(red: 0.610079325, green: 0.9385074156, blue: 1, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))]),
                     startPoint: .topLeading,
-                    endPoint: .bottom)).ignoresSafeArea()
+                    endPoint: .bottom)).opacity(0.8).ignoresSafeArea()
             ScrollView{
                 LazyVStack {Text("Favorites")
                         .font(.title).bold()

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var model:ContentModel
+    // @EnvironmentObject var model:ContentModel
+    @StateObject var model:ContentModel = ContentModel()
     @State private var showWelcomeView = false
     
         var body: some View {
@@ -31,7 +32,7 @@ struct HomeView: View {
                            Button(action: { showWelcomeView = true }) {
                                Text("Click Here to Start").foregroundColor(.white)
                                    .fontWeight(.bold)
-                                   .frame(minWidth: 0, maxWidth: 200)
+                                   .frame( maxWidth: 200)
                                    .padding(.all,20)
                                    .foregroundColor(.blue)
                                    .background(LinearGradient(gradient: Gradient(colors: [.green, .green]), startPoint: .leading, endPoint: .trailing))
@@ -42,7 +43,7 @@ struct HomeView: View {
                                Link(destination: URL(string:"https://www.amazon.com")!, label: {
                                    Text("Buy the Book Here").foregroundColor(.white)
                                        .fontWeight(.bold)
-                                       .frame(minWidth: 0, maxWidth: 200)
+                                       .frame( maxWidth: 200)
                                        .padding(.all,20)
                                        .foregroundColor(.blue)
                                        .background(LinearGradient(gradient: Gradient(colors: [.red, .red]), startPoint: .leading, endPoint: .trailing))

@@ -19,30 +19,30 @@ struct SearchView: View {
                         LinearGradient(
                             gradient: Gradient(colors: [Color(#colorLiteral(red: 0.610079325, green: 0.9385074156, blue: 1, alpha: 1)), Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))]),
                             startPoint: .topLeading,
-                            endPoint: .bottom)).ignoresSafeArea()
+                            endPoint: .bottom)).opacity(0.8).ignoresSafeArea()
                 ScrollView{
                     VStack(alignment: .leading, spacing: 25.0){
-                        Text("Search").font(.title).bold()
-                        NavigationLink( destination: SearchWord(), label: { Text("Search by Word").foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
+                        Text("Search").font(.title).bold().padding()
+                        NavigationLink( destination: SearchWord(), label: { Text("Search by Word").foregroundColor(.white).frame( maxWidth: .infinity)
                                 .padding(.all,20).font(.title2)
                                 .foregroundColor(.white)
                                 .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(10)})
-                        NavigationLink( destination: SearchCategory(), label: { Text("Search by Category").foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
+                            .cornerRadius(10).padding(.horizontal, 70)})
+                        NavigationLink( destination: SearchCategory(), label: { Text("Search by Category").foregroundColor(.white).frame( maxWidth: .infinity)
                                 .padding(.all,20).font(.title2)
                                 .foregroundColor(.white)
                                 .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(10)})
-                        NavigationLink( destination: SearchAnnounc(), label: { Text("Announcements").foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
+                            .cornerRadius(10).padding(.horizontal, 70)})
+                        NavigationLink( destination: SearchAnnounc(), label: { Text("Announcements").foregroundColor(.white).frame( maxWidth: .infinity)
                                 .padding(.all,20).font(.title2)
                                 .foregroundColor(.white)
                                 .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(10)})
-                        NavigationLink( destination: SearchDialoge(), label: { Text("Dialogues").foregroundColor(.white).frame(minWidth: 0, maxWidth: 200)
+                            .cornerRadius(10).padding(.horizontal, 70)})
+                        NavigationLink( destination: SearchDialoge(), label: { Text("Dialogues").foregroundColor(.white).frame( maxWidth: .infinity)
                                 .padding(.all,20).font(.title2)
                                 .foregroundColor(.white)
                                 .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue]), startPoint: .leading, endPoint: .trailing))
-                            .cornerRadius(10)})
+                            .cornerRadius(10).padding(.horizontal, 70)})
                     }.navigationBarHidden(false).padding(.bottom)
                 }
             }
